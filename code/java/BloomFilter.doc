@@ -1,0 +1,13 @@
+Explanation
+
+1. BitSet: A fixed-size bit array to represent the Bloom Filter.
+2. Hash Functions: Multiple hash functions are used to set bits in the BitSet. These functions should be independent to reduce the chances of collisions.
+3. Add Method:
+* Calculates hash values for an element using all hash functions.
+* Sets the corresponding bits in the BitSet.
+
+4. MightContain Method:
+* Checks whether all bits for the hash values of an element are set.
+* If any bit is not set, the element is definitely not in the set.
+* If all bits are set, the element might be in the set (false positives possible).
+
